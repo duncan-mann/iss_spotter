@@ -10,7 +10,7 @@ const printPassTimes = function(passTimes) {
   }
 };
 
-nextISSTimesForMyLocation( (error, passTimes) => {
+nextISSTimesForMyLocation((error, passTimes) => {
   if (error) {
     return console.log('Error!', error);
   } else {

@@ -87,13 +87,13 @@ const nextISSTimesForMyLocation = function(callback) {
           if (error) {
             return;
           } else {
+            callback(null, results);
           }
-          callback(null, results);
         });
       }
     });
   });
   
-}
+};
 
 module.exports = {nextISSTimesForMyLocation};
