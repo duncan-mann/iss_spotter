@@ -63,6 +63,11 @@ const fetchISSFlyOverTimes = function(coords, callback) {
       callback(error, null);
       return;
     }
+    if (response.statusCode !== 200) {
+      const msg = `Status Code ${response.statusCode} when fetching IP. Response: ${body}`;
+      callback(msg, null);
+      return;
+    }
     let responses = JSON.parse(body).response;
     console.log(responses);
     callback(null, responses);
